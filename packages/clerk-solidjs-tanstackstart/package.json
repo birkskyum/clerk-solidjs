@@ -1,5 +1,5 @@
 {
-  "name": "clerk-solidjs-solidstart",
+  "name": "clerk-solidjs-tanstackstart",
   "description": "Clerk for SolidJS",
   "private": false,
   "version": "2.2.0",
@@ -155,8 +155,8 @@
     "vitest": "^3.0.9"
   },
   "peerDependencies": {
-    "@solidjs/router": ">=0.14",
-    "@solidjs/start": ">=1",
+    "@tanstack/solid-router": ">=1",
+    "@tanstack/solid-start": ">=1",
     "solid-js": ">=1"
   },
   "engines": {

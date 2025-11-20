@@ -6,6 +6,13 @@ import type { SolidStartClerkProviderProps } from './types';
 import { useAwaitableNavigate } from './use-awaitable-navigate';
 import { mergeWithPublicEnvs, pickFromClerkInitState } from './utils';
 
+// Type definition for extended RequestEvent with locals
+interface RequestEventWithLocals {
+  locals?: {
+    clerkInitialState?: unknown;
+  };
+}
+
 export function ClerkProvider(
   props: SolidStartClerkProviderProps
 ): JSX.Element {
@@ -14,7 +21,8 @@ export function ClerkProvider(
 
   const clerkInitState = () =>
     isServer
-      ? getRequestEvent()?.locals.clerkInitialState
+      ? (getRequestEvent() as RequestEventWithLocals | undefined)?.locals
+          ?.clerkInitialState
       : (window as any).__clerk_init_state;
 
   const states = createMemo(() =>

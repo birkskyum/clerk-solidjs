@@ -3,6 +3,14 @@ import { getRequestEvent } from 'solid-js/web';
 
 export type AuthHelper = () => AuthObject;
 
+// Type definition for extended RequestEvent with locals
+interface RequestEventWithLocals {
+  locals: {
+    auth?: AuthObject;
+    clerkInitialState?: any;
+  };
+}
+
 /**
  * Function that retrieves the authentication information from the event object.
  * You must implement `clerkMiddleware` to use this function.
@@ -19,12 +27,12 @@ export type AuthHelper = () => AuthObject;
  * @return The authentication information stored in the event object.
  */
 export const auth: AuthHelper = () => {
-  const event = getRequestEvent();
+  const event = getRequestEvent() as RequestEventWithLocals | undefined;
   if (!event) {
     throw new Error('auth() must be called from within a server function');
   }
 
-  if (!event.locals.auth) {
+  if (!event.locals?.auth) {
     throw new Error('auth() returned null. Did you implement clerkMiddleware?');
   }
 
