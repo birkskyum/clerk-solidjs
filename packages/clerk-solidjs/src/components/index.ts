@@ -10,9 +10,9 @@ export {
   RedirectToUserProfile,
   SignedIn,
   SignedOut
-} from './control-components';
+} from './controlComponents';
 
-export type { ProtectProps } from './control-components';
+export type { ProtectProps } from './controlComponents';
 
 export { SignInButton } from './SignInButton';
 export { SignInWithMetamaskButton } from './SignInWithMetamaskButton';
@@ -30,4 +30,4 @@ export {
   UserButton,
   UserProfile,
   Waitlist
-} from './ui-components';
+} from './uiComponents';
