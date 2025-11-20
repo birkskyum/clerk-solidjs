@@ -1,6 +1,8 @@
 export * from './auth';
 export * from './middleware';
 
+export type { AuthHelper } from './auth';
+
 export { clerkClient } from './clerk-client';
 
 /**
