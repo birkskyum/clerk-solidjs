@@ -1,6 +1,6 @@
 import './polyfills';
 
-import { setErrorThrowerOptions } from './errors/error-thrower';
+import { setErrorThrowerOptions } from './errors/errorThrower';
 
 export * from './components';
 export * from './contexts';

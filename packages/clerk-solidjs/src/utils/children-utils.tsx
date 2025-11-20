@@ -1,5 +1,5 @@
 import type { JSX } from 'solid-js';
-import { errorThrower } from '../errors/error-thrower';
+import { errorThrower } from '../errors/errorThrower';
 import { multipleChildrenInButtonComponent } from '../errors/messages';
 
 export const assertSingleChild =

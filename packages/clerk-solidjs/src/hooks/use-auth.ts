@@ -6,7 +6,7 @@ import type {
 import { createMemo } from 'solid-js';
 import { useAuthContext } from '../contexts/auth';
 import { useIsomorphicClerkContext } from '../contexts/isomorphic-clerk';
-import { errorThrower } from '../errors/error-thrower';
+import { errorThrower } from '../errors/errorThrower';
 import { useAuthHasRequiresRoleOrPermission } from '../errors/messages';
 import { useAssertWrappedByClerkProvider } from './use-assert-wrapped-by-clerk-provider';
 import { createGetToken, createSignOut } from './utils';

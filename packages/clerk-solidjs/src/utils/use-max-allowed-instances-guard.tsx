@@ -1,5 +1,5 @@
 import { Accessor, Component, createEffect, onCleanup } from 'solid-js';
-import { errorThrower } from '../errors/error-thrower';
+import { errorThrower } from '../errors/errorThrower';
 
 const counts = new Map<string, number>();
 

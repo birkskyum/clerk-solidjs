@@ -6,5 +6,5 @@ export {
   isMetamaskError
 } from '@clerk/shared/error';
 
-export * from './errors/error-thrower';
+export * from './errors/errorThrower';
 export * from './errors/messages';

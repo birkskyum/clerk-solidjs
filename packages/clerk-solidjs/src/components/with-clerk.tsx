@@ -1,7 +1,7 @@
 import type { LoadedClerk, Without } from '@clerk/types';
 import { Accessor, Component, createEffect, JSX, Show } from 'solid-js';
 import { useIsomorphicClerkContext } from '../contexts/isomorphic-clerk';
-import { errorThrower } from '../errors/error-thrower';
+import { errorThrower } from '../errors/errorThrower';
 import { hocChildrenNotAFunctionError } from '../errors/messages';
 import { useAssertWrappedByClerkProvider } from '../hooks/use-assert-wrapped-by-clerk-provider';
 

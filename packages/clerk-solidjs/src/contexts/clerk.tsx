@@ -1,6 +1,6 @@
 import { isPublishableKey } from '@clerk/shared/keys';
 import { createEffect, JSX, splitProps } from 'solid-js';
-import { errorThrower } from '../errors/error-thrower';
+import { errorThrower } from '../errors/errorThrower';
 import { multipleClerkProvidersError } from '../errors/messages';
 import type { ClerkProviderProps } from '../types';
 import { withMaxAllowedInstancesGuard } from '../utils';
