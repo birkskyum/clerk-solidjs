@@ -37,7 +37,7 @@ import type {
   UserProfilePageProps,
   WithClerkProp
 } from '../types';
-import { withClerk } from './with-clerk';
+import { withClerk } from './withClerk';
 
 type UserProfileExportType = typeof _UserProfile & {
   Page: typeof UserProfilePage;

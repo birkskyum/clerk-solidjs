@@ -5,7 +5,7 @@ import {
   normalizeWithDefaultValue,
   safeExecute
 } from '../utils';
-import { withClerk } from './with-clerk';
+import { withClerk } from './withClerk';
 
 export const SignInButton = withClerk(
   (props: WithClerkProp<SignInButtonProps>) => {

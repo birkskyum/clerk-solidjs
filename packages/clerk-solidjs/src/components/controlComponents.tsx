@@ -23,7 +23,7 @@ import type {
   RedirectToSignUpProps,
   WithClerkProp
 } from '../types';
-import { withClerk } from './with-clerk';
+import { withClerk } from './withClerk';
 
 export const SignedIn = (props: ParentProps): JSX.Element => {
   useAssertWrappedByClerkProvider('SignedIn');

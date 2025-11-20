@@ -9,7 +9,7 @@ import {
   it,
   vi
 } from 'vitest';
-import { SignUpButton } from '../sign-up-button';
+import { SignUpButton } from '../SignUpButton';
 
 const mockRedirectToSignUp = vi.fn();
 const originalError = console.error;

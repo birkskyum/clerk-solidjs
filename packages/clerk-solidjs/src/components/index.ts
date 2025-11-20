@@ -14,10 +14,10 @@ export {
 
 export type { ProtectProps } from './control-components';
 
-export { SignInButton } from './sign-in-button';
-export { SignInWithMetamaskButton } from './sign-in-with-metamask-button';
-export { SignOutButton } from './sign-out-button';
-export { SignUpButton } from './sign-up-button';
+export { SignInButton } from './SignInButton';
+export { SignInWithMetamaskButton } from './SignInWithMetamaskButton';
+export { SignOutButton } from './SignOutButton';
+export { SignUpButton } from './SignUpButton';
 
 export {
   CreateOrganization,

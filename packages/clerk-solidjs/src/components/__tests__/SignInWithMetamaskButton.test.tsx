@@ -1,6 +1,5 @@
 import { cleanup, render, screen, waitFor } from '@solidjs/testing-library';
 import userEvent from '@testing-library/user-event';
-
 import {
   afterAll,
   beforeAll,
@@ -10,13 +9,13 @@ import {
   it,
   vi
 } from 'vitest';
-import { SignOutButton } from '../sign-out-button';
+import { SignInWithMetamaskButton } from '../SignInWithMetamaskButton';
 
-const mockSignOut = vi.fn();
+const mockAuthenticatewithMetamask = vi.fn();
 const originalError = console.error;
 
 const mockClerk = {
-  signOut: mockSignOut
+  authenticateWithMetamask: mockAuthenticatewithMetamask
 } as any;
 
 vi.mock('../with-clerk', () => {
@@ -27,7 +26,7 @@ vi.mock('../with-clerk', () => {
   };
 });
 
-describe('<SignOutButton />', () => {
+describe('<SignInWithMetamaskButton/>', () => {
   beforeAll(() => {
     console.error = vi.fn();
   });
@@ -38,30 +37,30 @@ describe('<SignOutButton />', () => {
 
   beforeEach(() => {
     cleanup();
-    mockSignOut.mockReset();
+    mockAuthenticatewithMetamask.mockReset();
   });
 
-  it('calls clerk.signOutOne when clicked', async () => {
-    render(() => <SignOutButton />);
-    const btn = screen.getByText('Sign out');
+  it('calls clerk.authenticateWithMetamask when clicked', async () => {
+    render(() => <SignInWithMetamaskButton />);
+    const btn = screen.getByText('Sign in with Metamask');
     userEvent.click(btn);
     await waitFor(() => {
-      expect(mockSignOut).toHaveBeenCalled();
+      expect(mockAuthenticatewithMetamask).toHaveBeenCalled();
     });
   });
 
-  it('uses text passed as children', async () => {
-    render(() => <SignOutButton>text</SignOutButton>);
+  it('uses text passed as children', () => {
+    render(() => <SignInWithMetamaskButton>text</SignInWithMetamaskButton>);
     screen.getByText('text');
   });
 
-  it('throws if multiple children provided', async () => {
+  it('throws if multiple children provided', () => {
     expect(() => {
       render(() => (
-        <SignOutButton>
+        <SignInWithMetamaskButton>
           <button>1</button>
           <button>2</button>
-        </SignOutButton>
+        </SignInWithMetamaskButton>
       ));
     }).toThrow();
   });
