@@ -1,5 +1,5 @@
 {
-  "name": "clerk-solidjs",
+  "name": "clerk-solidjs-solidstart",
   "description": "Clerk for SolidJS",
   "private": false,
   "version": "2.2.0",
@@ -19,112 +19,89 @@
   "license": "MIT",
   "author": "Spirit-Led Software",
   "type": "module",
-  "main": "./dist/index/server.cjs",
-  "module": "./dist/index/server.js",
-  "types": "./dist/index/index.d.ts",
+  "main": "./dist/start/server.cjs",
+  "module": "./dist/start/server.js",
+  "types": "./dist/start/index.d.ts",
   "typesVersions": {
     "*": {
-      "contexts": [
-        "./dist/contexts/index.d.ts"
+      "start": [
+        "./dist/start/index.d.ts"
       ],
-      "errors": [
-        "./dist/errors/index.d.ts"
-      ],
-      "types": [
-        "./dist/types/index.d.ts"
+      "start/server": [
+        "./dist/start/server/index.d.ts"
       ]
     }
   },
   "exports": {
-    ".": {
+    "./start": {
       "worker": {
-        "solid": "./dist/index/server.jsx",
+        "solid": "./dist/start/server.jsx",
         "import": {
-          "types": "./dist/index/index.d.ts",
-          "default": "./dist/index/server.js"
+          "types": "./dist/start/index.d.ts",
+          "default": "./dist/start/server.js"
         },
         "require": {
-          "types": "./dist/index/index.d.cts",
-          "default": "./dist/index/server.cjs"
+          "types": "./dist/start/index.d.cts",
+          "default": "./dist/start/server.cjs"
         }
       },
       "browser": {
-        "solid": "./dist/index/index.jsx",
+        "solid": "./dist/start/index.jsx",
         "import": {
-          "types": "./dist/index/index.d.ts",
-          "default": "./dist/index/index.js"
+          "types": "./dist/start/index.d.ts",
+          "default": "./dist/start/index.js"
         },
         "require": {
-          "types": "./dist/index/index.d.cts",
-          "default": "./dist/index/index.cjs"
+          "types": "./dist/start/index.d.cts",
+          "default": "./dist/start/index.cjs"
         }
       },
       "deno": {
-        "solid": "./dist/index/server.jsx",
+        "solid": "./dist/start/server.jsx",
         "import": {
-          "types": "./dist/index/index.d.ts",
-          "default": "./dist/index/server.js"
+          "types": "./dist/start/index.d.ts",
+          "default": "./dist/start/server.js"
         },
         "require": {
-          "types": "./dist/index/index.d.cts",
-          "default": "./dist/index/server.cjs"
+          "types": "./dist/start/index.d.cts",
+          "default": "./dist/start/server.cjs"
         }
       },
       "node": {
-        "solid": "./dist/index/server.jsx",
+        "solid": "./dist/start/server.jsx",
         "import": {
-          "types": "./dist/index/index.d.ts",
-          "default": "./dist/index/server.js"
+          "types": "./dist/start/index.d.ts",
+          "default": "./dist/start/server.js"
         },
         "require": {
-          "types": "./dist/index/index.d.cts",
-          "default": "./dist/index/server.cjs"
+          "types": "./dist/start/index.d.cts",
+          "default": "./dist/start/server.cjs"
         }
       },
-      "solid": "./dist/index/index.jsx",
+      "solid": "./dist/start/index.jsx",
       "import": {
-        "types": "./dist/index/index.d.ts",
-        "default": "./dist/index/index.js"
+        "types": "./dist/start/index.d.ts",
+        "default": "./dist/start/index.js"
       },
       "require": {
-        "types": "./dist/index/index.d.cts",
-        "default": "./dist/index/index.cjs"
+        "types": "./dist/start/index.d.cts",
+        "default": "./dist/start/index.cjs"
       }
     },
-    "./contexts": {
+    "./start/server": {
       "import": {
-        "types": "./dist/contexts/index.d.ts",
-        "default": "./dist/contexts/index.js"
+        "types": "./dist/start/server/index.d.ts",
+        "default": "./dist/start/server/index.js"
       },
       "require": {
-        "types": "./dist/contexts/index.d.cts",
-        "default": "./dist/contexts/index.cjs"
-      }
-    },
-    "./errors": {
-      "import": {
-        "types": "./dist/errors/index.d.ts",
-        "default": "./dist/errors/index.js"
-      },
-      "require": {
-        "types": "./dist/errors/index.d.cts",
-        "default": "./dist/errors/index.cjs"
-      }
-    },
-    "./types": {
-      "import": {
-        "types": "./dist/types/index.d.ts",
-        "default": "./dist/types/index.js"
-      },
-      "require": {
-        "types": "./dist/types/index.d.cts",
-        "default": "./dist/types/index.cjs"
+        "types": "./dist/start/server/index.d.cts",
+        "default": "./dist/start/server/index.cjs"
       }
     }
   },
   "browser": {
-    "./dist/index/server.js": "./dist/index/index.js",
-    "./dist/index/server.cjs": "./dist/index/index.cjs"
+    "./dist/start/server.js": "./dist/start/index.js",
+    "./dist/start/server.cjs": "./dist/start/index.cjs"
   },
   "files": [
     "./dist"
@@ -149,7 +126,8 @@
     "@solid-primitives/context": "^0.3.0",
     "@solid-primitives/destructure": "^0.2.0",
     "@solid-primitives/memo": "^1.4.1",
-    "@tanstack/solid-query": "^5.69.0"
+    "@tanstack/solid-query": "^5.69.0",
+    "clerk-solidjs": "workspace:*"
   },
   "devDependencies": {
     "@clerk/clerk-js": "^5.58.1",

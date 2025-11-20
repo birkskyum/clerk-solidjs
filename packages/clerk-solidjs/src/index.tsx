@@ -4,6 +4,7 @@ import { setErrorThrowerOptions } from './errors/error-thrower';
 
 export * from './components';
 export * from './contexts';
+export * from './errors';
 
 export * from './hooks';
 export type {

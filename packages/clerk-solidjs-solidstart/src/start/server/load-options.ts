@@ -7,7 +7,7 @@ import {
   isProxyUrlRelative
 } from '@clerk/shared';
 
-import { errorThrower } from '../../errors/error-thrower';
+import { errorThrower } from 'clerk-solidjs/errors';
 import { getEnvVariable, getPublicEnvVariables } from '../utils/env';
 import {
   CLERK_JWT_KEY,

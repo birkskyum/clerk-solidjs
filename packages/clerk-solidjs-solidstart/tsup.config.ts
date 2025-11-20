@@ -17,20 +17,13 @@ export default defineConfig((config) => {
     {
       entries: [
         {
-          entry: 'src/index.tsx',
+          name: 'start',
+          entry: 'src/start/index.tsx',
           server_entry: true
         },
         {
-          name: 'errors',
-          entry: 'src/errors.ts'
-        },
-        {
-          name: 'contexts',
-          entry: 'src/contexts/index.ts'
-        },
-        {
-          name: 'types',
-          entry: 'src/types.ts'
+          name: 'start/server',
+          entry: 'src/start/server/index.ts'
         }
       ],
       cjs: true,
